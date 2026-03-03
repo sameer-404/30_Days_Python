@@ -18,3 +18,11 @@ else:
   middle_index2 = (length//2)
   del it_companies[middle_index1:middle_index2+1]
   print(it_companies)
+
+#Remove the last IT company from the list
+it_companies.pop(-1)
+print(it_companies)
+
+#Remove all IT companies from the list
+del it_companies
+#print(it_companies) #Will throw name error
