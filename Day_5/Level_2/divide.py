@@ -4,11 +4,22 @@ countries = [
     "Mali", "United Arab Emirates", "Canada", "United States", "Japan", "South Korea",
     "Russia", "Finland", "Greece", "Italy", "Australia", "Indonesia", "Belgium",
     "Maldives", "Brazil", "Peru", "Libya", "United Kingdom", "Argentina", "Ethiopia",
-    "Egypt", "Singapore", "Mexico"
+    "Egypt", "Singapore" , "Mexico"
 ]
+countries.sort()
 
 length = len(countries)
 
-if length//2 == 1:
-  middle_county_index = length//2
-  print(f"The first halves countries are: {countries[:middle_county_index]}")
+if length % 2 == 1:  # % 2 checks for remainder
+    print("It's odd!")
+    middle_item = (length // 2) - 1
+    print(f"Middle country is: {middle_item}")
+    print(f"The list is : {countries[0:middle_item]}")
+    print("and")
+    print(f"{countries[middle_item:]}")
+else:
+    print("It's even!")
+    middle_item2 = (length //2)
+    print(f"The list is : {countries[0:middle_item2]}")
+    print("and")
+    print(f"{countries[middle_item2:]}")
