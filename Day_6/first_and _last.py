@@ -6,3 +6,5 @@ last_three = groceries[-3:]
 print(f"The last three items are : {last_three}")
 
 #Delete the food_stuff_tp tuple completely
+del groceries
+#print(groceries) - will throw an error
