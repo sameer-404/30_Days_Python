@@ -24,5 +24,9 @@ it_companies.pop(-1)
 print(it_companies)
 
 #Remove all IT companies from the list
+it_companies.clear()
+print(it_companies)
+
+#Destroy the IT companies list
 del it_companies
-#print(it_companies) #Will throw name error
+#print(it_companies)
