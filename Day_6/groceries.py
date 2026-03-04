@@ -1,7 +1,8 @@
 #Create fruits, vegetables and animal products tuples. Join the three tuples and assign it to a variable called food_stuff_tp.
 fruits = ("apple", "orange", "mango")
 vegatables = ("cucumber", "carrot", "cabbage", "potatoes")
-animal_products = ("meat", "fish", "eggs", )
+animal_products = ("meat", "fish", "eggs", "seafood")
+
 groceries_tp = fruits + vegatables + animal_products
 print(groceries_tp)
 
