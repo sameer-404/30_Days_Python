@@ -31,3 +31,17 @@ if "skills" in person:
         print("There was no skill like Python!")
 
 #If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
+if "skills" in person:
+    skills = person["skills"]
+
+    if "JavaScript" in skills and "React" in skills and len(skills) == 2:
+        print("He is a front end developer")
+
+    elif "Node" in skills and "Python" in skills and "MongoDB" in skills:
+        print("He is a backend developer")
+
+    elif "React" in skills and "Node" in skills and "MongoDB" in skills:
+        print("He is a fullstack developer")
+
+    else:
+        print("unknown title")
