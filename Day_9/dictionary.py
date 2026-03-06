@@ -45,3 +45,10 @@ if "skills" in person:
 
     else:
         print("unknown title")
+
+#If the person is married and if he lives in Finland, print the information in the following format:
+#Asabeneh Yetayeh lives in Finland. He is married.
+if person["is_married"] == True:
+    print(f"{person['first_name']} {person['last_name']} lives in {person['country']}. He is married!")
+else:
+    print("He is not married")
