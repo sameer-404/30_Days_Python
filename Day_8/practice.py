@@ -148,3 +148,66 @@ print(person.items()) #Changes a dictionary into a list of tuples"""
 
 #Clearing a Dictionary
 #If we don't want the items in a dictionary we can clear them using clear() method
+"""person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+
+person.clear()
+print(person["first_name"])"""
+
+#Copy a Dictionary
+#We can copy a dictionary using a copy() method. Using copy we can avoid mutation of the original dictionary.
+"""person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+
+Asabeneh = person.copy()
+person.clear()
+print(person)
+print(Asabeneh)
+
+#del dictionary using del() keyword
+del person
+print(person)"""
+
+#Getting Dictionary Keys as a List
+"""person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+#The keys() method gives us all the keys of a a dictionary as a list.
+#For example
+keys = person.keys()
+print(keys)
+
+#Getting Dictionary Values as a List
+#The values method gives us all the values of a a dictionary as a list.
+
+values = person.values()
+print(values)"""
