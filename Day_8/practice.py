@@ -45,7 +45,7 @@ print(address_zip)"""
 
 #Adding Items to a Dictionary
 #We can add new key and value pairs to a dictionary
-person = {
+"""person = {
     'first_name':'Asabeneh',
     'last_name':'Yetayeh',
     'age':250,
@@ -61,3 +61,90 @@ person = {
 person["date"] = "never"
 print(person)
 #U aint never getting the date bro gave up!
+
+#Alternate method:
+person['skills'].append("C")
+print(person["skills"])"""
+
+#Modifying Items in a Dictionary
+"""
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+person['first_name'] = 'Sameer'
+person["age"] = 21
+print(person.get("age"))
+print(person.get("first_name"))"""
+
+#Checking Keys in a dictionary:
+#We use the in operator to check if a key exist in a dictionary
+
+"""person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+
+print("first_name" in person) #True as that key exist
+print("idk" in person) #there's no such key
+"""
+
+#Removing Key and Value Pairs from a Dictionary
+#pop(key): removes the item with the specified key name:
+"""person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+person.pop("first_name")
+print(person.get("first_name"))
+
+person.popitem()
+print(person.get("address"))
+del person['is_married']  #Removes the is_married item from the dictionary"""
+
+#Both of them throw none as output cause get() method have default value none
+
+
+#Changing Dictionary to a List of Items
+#The items() method changes dictionary to a list of tuples.
+"""person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+print(person.items()) #Changes a dictionary into a list of tuples"""
+
+
+#Clearing a Dictionary
+#If we don't want the items in a dictionary we can clear them using clear() method
