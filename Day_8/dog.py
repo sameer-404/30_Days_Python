@@ -8,3 +8,4 @@ dog["breed"] = "Japnese Spitz"
 dog["legs"] = 4
 dog["age"] = 7
 print(dog)
+
