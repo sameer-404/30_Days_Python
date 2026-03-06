@@ -63,11 +63,11 @@ else:
   print(f"{a} is negative")"""
 
 #If and Or Logical Operators
-user = "sameer"
+"""user = "sameer"
 user_level = 3
 if user == "sameer" or user_level == 2:
   print("Access granted!")
 else:
-  print("Access denied")
+  print("Access denied")"""
 
 #one condition has to be true!
