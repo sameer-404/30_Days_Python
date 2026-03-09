@@ -4,6 +4,6 @@ def add_item(my_list, item):
   my_list.append(item)
   return my_list
 
-final_list = [1,2,3,4,5]
-result = add_item(final_list,6)
+final_list = ["Potato", "Pumpkin", "Apple"]
+result = add_item(final_list,"Chicken")
 print(result)
