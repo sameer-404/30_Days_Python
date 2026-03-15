@@ -14,3 +14,6 @@ A function can be assigned to a variable
 #Handling functions as parameters
 #Returning functions as return value from another functions
 #Using Python closures and decorators
+
+
+#Something
