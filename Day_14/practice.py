@@ -25,3 +25,6 @@ def higher_order_function(f, lst):  # function as a parameter
     return summation
 result = higher_order_function(sum_numbers, [1, 2, 3, 4, 5])
 print(result)       # 15
+
+#Key concept:
+#Functions in Python can be passed as arguments, stored in variables, and used just like other objects.
