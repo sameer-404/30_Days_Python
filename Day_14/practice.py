@@ -99,7 +99,7 @@ say_name()"""
 #Decorators = A function that extends the behavior of another function w/o modifying the base function
 #pass the base function as an argument to the decorator
 
-def add_sprinkles(func):
+"""def add_sprinkles(func):
   def wrapper(*args, **kwargs):
     print("you added sprinkles!")
     func(*args, **kwargs)
@@ -120,3 +120,132 @@ def get_ice_cream(flavor):
 get_ice_cream("vanilla")
 
 
+"""
+
+
+#Built-in Higher Order Functions
+
+#Some of the built-in higher order functions that we cover in this part are map(), filter, and reduce. Lambda function can be passed as a parameter and the best use case of lambda functions is in functions like map, filter and reduc
+
+#python - map function:
+#Map function - map(function, iterable)
+#returns an iterator that applied function to every item of iterable\
+"""
+def make_even(num):
+    if num % 2 == 1:
+        return num -1
+    else:
+        return num
+
+x = [551, 641, 122, 435, 223, 234, 343, 561, 115, 552, 111, 679, 101]
+
+#Old method:
+""""""y = []
+for num in x:
+    y.append(make_even(num))
+
+print(y)"""
+"""
+#Map function:
+y = list(map(make_even, x))
+print(y)"""
+
+
+#filter function = filter(function, iterable)
+#returns items from iterable based on some criteria
+
+#for examples:
+#Let's filter out only even numbers:
+"""numbers = [1,2,3,4,5,6,7,8,9] #iterable
+
+def is_even(num):
+  if num % 2 == 0:
+    return True
+  else:
+    return False
+  
+even_numbers = list(filter(is_even, numbers))
+print(even_numbers)
+
+#It can also be done in dictionary for example:
+#We want to find a room which has more than 2 bedrooms and less than $1600
+
+
+avail_units = {
+    '101': {
+        'bedrooms': 3,
+        'bathrooms': 2,
+        'price': 1625
+    },
+    '215': {
+        'bedrooms': 2,
+        'bathrooms': 2,
+        'price': 1550
+    },
+    '231': {
+        'bedrooms': 1,
+        'bathrooms': 1,
+        'price': 1400
+    },
+    '431': {
+        'bedrooms': 2,
+        'bathrooms': 1,
+        'price': 1500
+    },
+    '422': {
+        'bedrooms': 2,
+        'bathrooms': 1,
+        'price': 1300
+    },
+    '310': {
+        'bedrooms': 3,
+        'bathrooms': 2,
+        'price': 1800
+    },
+    '512': {
+        'bedrooms': 1,
+        'bathrooms': 1,
+        'price': 1100
+    }
+}
+
+def my_filter(unit_num):
+  if avail_units[unit_num]["price"] < 1900 and avail_units[unit_num]["bedrooms"] > 2:
+    return True
+  else:
+    return False
+  
+result = list(filter(my_filter, avail_units))
+print(result)"""
+
+
+#Python reduce Function:
+#The reduce function is defined in the fucntion module and we should import it from this module. Like map and filter it takes two paramaters , a function and an iterable. However, it does not return another iterable, instead it returns a single value.
+
+#for example:
+"""from functools import reduce  
+
+numbers_str = ["1", "2", "3", "4", "5", "6"]
+
+def add_two_nums(x,y):
+  return int(x) + int(y)
+
+total = reduce(add_two_nums, numbers_str)
+print(total)"""
+
+"""
+numbers_str = ["1", "2", "3", "4", "5", "6"]
+```
+```
+["1", "2", "3", "4", "5", "6"]
+  ↓    ↓
+add(1, 2) = 3
+       ↓    ↓
+    add(3, 3) = 6
+           ↓    ↓
+        add(6, 4) = 10
+               ↓    ↓
+           add(10, 5) = 15
+                   ↓    ↓
+               add(15, 6) = 21 ← final answer
+"""
