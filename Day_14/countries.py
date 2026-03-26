@@ -9,5 +9,13 @@ countries = [
     'Uganda', 'Vietnam', 'Zambia', 'Brazil', 'China'
 ]
 
-for country in countries:
-  print(country)
+"""for country in countries:
+  print(country)"""
+
+#Use map to create a new list by changing each country to uppercase in the countries list
+
+def uppercase(country):
+  return country.upper()
+
+upper_cased_countries = list(map(uppercase, countries ))
+print(upper_cased_countries)

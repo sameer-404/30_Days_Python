@@ -6,5 +6,10 @@ names = [
     'Paula', 'Quinn', 'Rachel', 'Samuel', 'Tina'
 ]
 
-for name in names:
-  print(name)
+#Use map to change each name to uppercase in the names list
+
+def upper(name):
+  return name.upper()
+
+upper_names = list(map(upper, names))
+print(upper_names)
