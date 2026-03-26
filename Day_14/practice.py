@@ -75,3 +75,48 @@ print(closure_result(10))   # 20  →  10 + 10"""
 #Python Decorators
 #A decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are usually called before the definition of a function you want to decorate.
 
+#Creating Decorators
+#To create a decorator function, we need an outer function with an inner wrapper function.
+"""
+def shout(func):
+    def wrapper():
+        print("GET READY!")
+        func()
+        print("DONE!")
+    return wrapper
+
+@shout
+def say_name():
+    print("My name is Sameer")
+
+say_name()"""
+
+
+#Applying Multiple Decorators to a Single Function
+
+
+#Bro code:
+#Decorators = A function that extends the behavior of another function w/o modifying the base function
+#pass the base function as an argument to the decorator
+
+def add_sprinkles(func):
+  def wrapper(*args, **kwargs):
+    print("you added sprinkles!")
+    func(*args, **kwargs)
+  return wrapper
+
+def add_fudge(func):
+  def wrapper(*args, **kwargs):
+    print("You added fudge!")
+    func(*args, **kwargs)
+  return wrapper
+
+
+@add_sprinkles
+@add_fudge
+def get_ice_cream(flavor):
+  print(f"Here is your {flavor} icecream!!!")
+
+get_ice_cream("vanilla")
+
+
